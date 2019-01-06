@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
 # NN
 COPY requirements.txt /tmp/
 RUN pip install --requirement /tmp/requirements.txt
-RUN mkdir /working_dir && cd /working_dir \
+RUN mkdir /working_dir && cd /working_dir && \
 	git clone https://github.com/jackyko1991/vnet-tensorflow.git
 
 # NAS
