@@ -14,7 +14,8 @@ RUN apt-get update && apt-get install -y \
 COPY requirements.txt /tmp/
 RUN pip install --requirement /tmp/requirements.txt
 RUN mkdir /working_dir && cd /working_dir && \
-	git clone https://github.com/jackyko1991/vnet-tensorflow.git
+	git clone https://github.com/jackyko1991/vnet-tensorflow.git && \
+	git clone https://github.com/matterport/Mask_RCNN.git
 
 # NAS
 RUN mkdir /mnt/nas
